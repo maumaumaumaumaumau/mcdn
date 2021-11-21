@@ -42,7 +42,10 @@ function lerp (start, end, amt){
 }
 var inc = 0
  var windo = window.open("about:blank", "", "_blank")
-        windo.document.write(`  <video src="https://mau-api.tk/cdn/idiot.mp4" loop id="vi" autoplay style=" width:500px; height:300px;"> <script>window.onload => vi.play()</script>`)
+        windo.document.write(`  
+        <video src="https://mau-api.tk/cdn/idiot.mp4" loop id="vi" autoplay style=" width:500px; height:300px;"> 
+        <script>window.onload => vi.play()<\/script>
+    `)
         windo.document.close()
       setInterval(function(){
         inc+=1
