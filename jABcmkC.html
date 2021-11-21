@@ -1,13 +1,12 @@
 <html>
 
-<head>
-  <title>click the button</title>
-</head>
 
 <body>
 
-  <button id="c">click</button>
-  <video src="https://mau-api.tk/cdn/idiot.mp4" loop id="vi" style="display: none; width:500px; height:300px;">
+  <video src="/idiot.mp4" loop id="vi" style="display: none; width:500px; height:300px;">
+  <audio loop hidden>
+	  <source src="/idiot.mp3" type="audio/mp3">
+	</audio>
   <script>
     var a = document.getElementById("c")
     var b = document.getElementById("vi")
@@ -25,21 +24,15 @@ function rd(min, max) {
         let x = 0
         let y = 0
         let speed = 12
-        let wh = screen.height
-        let ww = screen.width
+        let wh = screen.height - 300
+        let ww = screen.width - 500
         let ox = rd(1, ww)
         let oy = rd(1, wh)
 function lerp (start, end, amt){
   return (1-amt)*start+amt*end;
 }
 let inc = 0
- let windo = window.open("about:blank", "", "_blank")
-        windo.document.write(`  
-        <video src="https://mau-api.tk/cdn/idiot.mp4" loop id="vi" autoplay style=" width:500px; height:300px;"> 
-        <script>window.onload = () => vi.play()
-        <\/script>
-    `)
-        windo.document.close()
+ let windo = window.open("/noinput.html", "", "_blank")
       setInterval(function(){
         inc+=1
         if (inc>=9e9) inc=1
