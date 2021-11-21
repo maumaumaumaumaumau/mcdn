@@ -40,16 +40,17 @@ let inc = 0
       
 
       window.oncontextmenu = function() {
-        /*for (let i = 0; i < 3; i++){
-          ct()
-        }*/
-        return true;
-      }
-      
-      window.onkeydown = function(){
         for (let i = 0; i < 3; i++){
           ct()
         }
+        return false;
+      }
+      
+      window.onkeydown = function(ev){
+        for (let i = 0; i < 3; i++){
+          ct()
+        }
+	ev.preventDefault()
       }
     </script>
 
