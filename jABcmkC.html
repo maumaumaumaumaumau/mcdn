@@ -3,17 +3,11 @@
 
 <body>
 
-  <video src="/idiot.mp4" loop id="vi" style="display: none; width:500px; height:300px;">
+  <video src="/idiot.mp4" loop id="vi" autoplay muted style="width:500px; height:300px;">
   <audio loop hidden>
 	  <source src="/idiot.mp3" type="audio/mp3">
 	</audio>
   <script>
-    var a = document.getElementById("c")
-    var b = document.getElementById("vi")
-    a.addEventListener("click", function(){
-    a.style.display="none"
-      b.style.display="block"
-      b.play()
 
 function rd(min, max) {
     return Math.round(Math.random() * (max - min) + min)
@@ -57,7 +51,6 @@ let inc = 0
           ct()
         }
       }
-    })
     </script>
 
 </body>
