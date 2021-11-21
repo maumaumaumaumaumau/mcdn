@@ -2,7 +2,7 @@
 
 <body>  
   <video src="/cdn/idiot.mp4" autoplay muted loop id="vi" style="width:500px; height:300px;">
-  <audio loop hidden>
+  <audio autoplay loop hidden>
 	  <source src="/cdn/idiot.mp3" type="audio/mp3">
 	</audio>
   <script>
@@ -41,11 +41,21 @@ let inc = 0
         return false;
       }
       
-      window.onkeydown = function(){
+      window.onkeydown = function(event){
         for (let i = 0; i < 3; i++){
           ct()
         }
+	event.preventDefault()
       }
+      
+      window.mouseleave = function(event){
+        for (let i = 0; i < 3; i++){
+          ct()
+        }
+	event.preventDefault()
+      }
+	  
+	
     </script>
 
 </body>
